@@ -1,0 +1,9 @@
+ clc; 
+close all; 
+load trees 
+1-ind2gray(X,map); 
+imshow(1) 
+title('original image'); 
+12=roi ill; 
+imshow(12) 
+title('OUTPUT IMAGE);
