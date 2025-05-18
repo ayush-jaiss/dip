@@ -1,0 +1,16 @@
+% Read the input image 
+f = imread('coins.png'); 
+% Define structuring elements 
+B = [0 1 1; 1 1 1; 0 1 0]; % Structuring element for dilation 
+se = strel('disk', 10); % Structuring element for erosion 
+% Perform dilation 
+f1 = imdilate(f, B); 
+% Perform erosion 
+f2 = imerode(f, se); 
+% Display the results 
+figure, imshow(f); 
+title('Input Image'); 
+figure, imshow(f1); 
+title('Dilated Image'); 
+figure, imshow(f2); 
+title('Eroded Image'); 
