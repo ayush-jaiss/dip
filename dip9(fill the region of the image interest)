@@ -1,0 +1,13 @@
+clc; 
+closeall; 
+loadtrees; 
+imshow(X,map); 
+title('OriginalImage'); 
+fprintf('Select the region of interest using roipoly.\n'); 
+roi_mask = roipoly(); % Returns a binary mask of the selected region filled_image = X; 
+filled_image (roi_mask) = 255; % Fill the selected region with white figure; subplot(1,2,1); 
+imshow(X,map); 
+title('OriginalImage'); 
+subplot(1,2,2); 
+imshow(filled_image,map); 
+title('Image with Filled Region of Interest'); 
