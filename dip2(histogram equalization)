@@ -1,3 +1,35 @@
+Commands used: 
+imread('trees.tif') → Reads an image file into MATLAB as a matrix. 
+imshow(I) → Displays the image stored in variable I. 
+title('Original Image') → Adds a title to the displayed image. 
+imcomplement(I) → Computes the negative (complement) of an image. 
+imhist(I, 64) → Displays the histogram of the image I with 64 bins. 
+histeq(I) → Performs histogram equalization to enhance image contrast. 
+numel(I) → Returns the total number of pixels in image I. 
+imhist(I) / n → Computes the normalized histogram (dividing histogram values by total 
+pixels). 
+plot(p) → Plots the normalized histogram values. 
+imadjust(I, [0 1], [0.4 1], 0.5) → Adjusts image contrast using input and output intensity 
+mapping. 
+maketform('affine', [0.3 0 0; 0.5 1 0; 0 1 1]) → Creates an affine transformation matrix. 
+imtransform(I, T) → Applies the affine transformation to image I. 
+figure → Creates a new figure window for displaying images or plots. 
+imshow(K) → Displays the adjusted image. 
+imhist(I_eq, 64) → Displays the histogram of the equalized image. 
+
+
+Theory: Histogram equalization is a method in image processing of contrast adjustment using 
+the image's histogram. Histogram equalization often produces unrealistic effects in 
+photographs; however, it is very useful for scientific images like thermal or x-ray images, often 
+the same class of images to which one would apply false colour. Also, histogram equalization 
+can produce undesirable effects when applied to images with low colour depth. For example, 
+if applied to 8-bit image displayed with 8-bit Gray scale it will further reduce colour depth 
+(number of unique shades of grey) of the image. Histogram equalization will work the best 
+when applied to images with much higher depth than palette size, like continuous data or 16
+bit gray-scale images.
+
+
+
 I=imread('trees.tif"); 
 J-imcomplement(1); 
 Cimhist(1,100); 
