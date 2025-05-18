@@ -1,0 +1,16 @@
+Isimread(coins.png'); 
+figure,imshow(1) 
+title (figure 1 original image'); 
+h-ones(5,5)/25; 
+beim ilter(Lh); 
+igure,imshow(b) 
+title (figure 2 filtered image'); 
+c-edge(b, sobel'); 
+igure,imshow(c) 
+title (igure 3 edge detected output by sobel operator'); d-edge(b, prewitt'); 
+igure.imshow(d) 
+title (figure 4 edge detected output by prewitt operator'); esedge(b,robert); 
+igure,imshow(e) 
+title (figure 5 edge detected output by robert operator'); fredge(b, canny'); 
+igure,imshow() 
+title (figure 6 edge detected output by canny operator'); 
