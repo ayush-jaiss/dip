@@ -1,3 +1,21 @@
+THEORY: Erosion (usually represented by ) is one of two fundamental operations (the 
+other being dilation) in morphological image processing from which all other 
+morphological operations are based. It was originally defined for binary images, later 
+being extended to grayscale images, and subsequently to complete lattices.  
+With A and B as two sets in Z2 (2D integer space), the dilation of A and B is defined as  
+A(+)B={Z|(B ̂)Z∩A ≠ ɸ}  
+In the above example, A is the image while B is called a structuring element.  
+In the equation,(B ̂)Z simply means taking the reflections of B about its origin and shifting it 
+by Z. Hence dilation of A with  
+B is a set of all displacements, Z, such that (B ̂)Z and A overlap by at least one element. 
+Flipping of B about the origin and then moving it past image A is analogous to the 
+convolution process. In practice flipping of B is not done always.  
+Dilation adds pixels to the boundaries of object in an image. The number of pixels added 
+depends on the size and shape of the structuring element. Based on this definition, dilation 
+can be defined as  
+A(+)B={{Z|(B ̂)Z∩A} ϵ A}  
+
+
 % Read the input image 
 f = imread('coins.png'); 
 % Define structuring elements 
