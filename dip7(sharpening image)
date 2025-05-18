@@ -1,0 +1,14 @@
+Program: 
+% Program of sharpen image using gradient mask 1-imread('coins.png'); 
+subplot(2,2,1); 
+imshow(1) 
+title(Original Image'); 
+h=fspecial('sobel'); 
+f=im ilter(1,h, replicate'); 
+subplot(2,2,2); 
+imshow(F) 
+title('iltered image by sobel mask); 
+s=1+F; 
+subplot(2,2,4); 
+imshow(s) 
+title(Final a/p Image);
