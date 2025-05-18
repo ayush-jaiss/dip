@@ -1,3 +1,29 @@
+Commands used: 
+imread('coins.png') → Reads the input image. 
+imshow(I) → Displays the image. 
+title('...') → Adds a title to the displayed image. 
+ones(5,5)/25 → Creates a 5×5 averaging filter (smoothing filter). 
+imfilter(I, h) → Applies the filter to the image. 
+edge(b, 'sobel') → Detects edges using the Sobel operator. 
+edge(b, 'prewitt') → Detects edges using the Prewitt operator. 
+edge(b, 'roberts') → Detects edges using the Roberts operator. 
+edge(b, 'canny') → Detects edges using the Canny operator. 
+figure, imshow(...) → Displays each processed image in a separate window. 
+
+
+Theory: The Canny edge detector is an edge detection operator that uses a multi- stage 
+algorithm to detect a wide range of edges in images. It was developed by John F. Canny in 
+1986. Canny also produced a computational theory of edge detection explaining why the 
+technique works. 
+The Process of Canny edge detection algorithm can be broken down to 5 different steps: 
+1. Apply Gaussian filter to smooth the image in order to remove the noise. 
+2. Find the intensity gradients of the image. 
+3. Apply non-maximum suppression to get rid of spurious response to edge detection. 
+4. Apply double threshold to determine potential edges. 
+5. Track edges by hypothesis: Finalize the detection of edges by suppressing all the other edges 
+that are weak and not connected to strong edges. 
+
+
 Isimread(coins.png'); 
 figure,imshow(1) 
 title (figure 1 original image'); 
